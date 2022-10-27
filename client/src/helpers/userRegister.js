@@ -5,7 +5,7 @@ export const userRegister = ( user ) => {
     const data = JSON.stringify( user ),
         config = {
             method: 'post',
-            url: `${ url }/api/user/register`,
+            url: `/api/user/register`,
             headers: {
                 'Content-Type': 'application/json'
             },
