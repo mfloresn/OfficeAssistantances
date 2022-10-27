@@ -332,11 +332,11 @@ export const useFetchDataTable = (username, mode, type) => {
                 }
             })
             .catch((err) => {
-                console.log(err);
+                console.log(err.response.data.error);
                 Swal.fire({
                     icon: "error",
                     title: "Error",
-                    text: 'Verfique que todos los datos estén correctos y/o que el correo no esté registrado',
+                    text: err.response.data.error,
                     confirmButtonColor: "#1565c0",
                     confirmButtonText: "Aceptar",
                 });
@@ -361,7 +361,7 @@ export const useFetchDataTable = (username, mode, type) => {
                 }
             })
             .catch((err) => {
-                console.log(err);
+                console.log(err.response.data.error);
                 Swal.fire({
                     icon: "error",
                     title: "Error",
